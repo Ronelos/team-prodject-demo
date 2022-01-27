@@ -1,0 +1,13 @@
+.film {
+    
+    display: grid;
+    grid-template-columns: 1fr repeat(1, minmax(auto, 25em)) 1fr;
+    /* grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto); */
+}
+.film-card {
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    
+}
