@@ -1,7 +1,6 @@
 .film {
   outline: 1px solid red;
-  width: 320px;
-  max-width: 767px;
+  min-width: 320px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -12,6 +11,7 @@
 
 @media screen and (min-width: 768px) {
   .film {
+    width: 768px;
     padding-left: 76px;
     padding-right: 76px;
   }
