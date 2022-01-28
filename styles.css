@@ -1,13 +1,116 @@
 .film {
-    
-    display: grid;
-    grid-template-columns: 1fr repeat(1, minmax(auto, 25em)) 1fr;
-    /* grid-template-rows: minmax(1em, auto) 1fr auto minmax(1em, auto); */
+  outline: 1px solid red;
+  width: 320px;
+  max-width: 767px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.film-card {
-    margin: 0 auto;
+
+@media screen and (min-width: 768px) {
+  .film {
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+}
+
+.film-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .film-list {
+    -ms-grid-columns: (minmax(280px, 2fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+    grid-gap: 20px;
     padding: 0;
-    align-items: center;
-    justify-content: center;
-    
+    margin: 0;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .film-list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+.film-item {
+  width: 280px;
+}
+
+@media screen and (min-width: 768px) {
+  .film-item {
+    width: 280px;
+  }
+}
+
+.film-img {
+  width: 280px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .film-img {
+    width: 280px;
+  }
+}
+
+.film-info {
+  width: 280px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .film-info {
+    width: 280px;
+  }
+}
+
+.film-name {
+  width: 280px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .film-name {
+    width: 280px;
+  }
+}
+
+.film-genre {
+  width: 280px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FF6B08;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .film-genre {
+    width: 280px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
