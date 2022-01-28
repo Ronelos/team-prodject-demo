@@ -1,6 +1,6 @@
 .film {
   outline: 1px solid red;
-  min-width: 320px;
+  width: 320px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -20,8 +20,8 @@
 .film-list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
   padding: 0;
   margin: 0;
@@ -30,8 +30,8 @@
 
 @media screen and (min-width: 768px) {
   .film-list {
-    -ms-grid-columns: (minmax(280px, 2fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     padding: 0;
     margin: 0;
