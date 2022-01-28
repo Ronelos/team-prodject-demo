@@ -1,8 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .film {
   outline: 1px solid red;
   width: 320px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
+  padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   -webkit-box-align: center;
@@ -13,7 +19,7 @@
 @media screen and (min-width: 768px) {
   .film {
     width: 768px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -26,7 +32,7 @@
 @media screen and (min-width: 1024px) {
   .film {
     width: 1024px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -37,51 +43,29 @@
 }
 
 .film-list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
+  list-style: none;
   padding: 0;
   margin: 0;
-  padding-top: 20px;
-  list-style: none;
 }
 
 @media screen and (min-width: 768px) {
   .film-list {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
-    padding: 0;
-    padding-top: 60px;
-    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .film-list {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
-    padding: 0;
-    padding-top: 60px;
-    margin: 0;
-  }
+.film-item {
+  width: 280px;
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 .film-img {
   width: 100%;
   border-radius: 5px;
   padding-bottom: 10px;
-}
-
-.film-img > img {
-  width: 100%;
 }
 
 .film-info {
@@ -96,6 +80,8 @@
 }
 
 .film-name {
+  margin: 0;
+  width: 100%;
   font-family: Roboto;
   font-weight: 500;
   font-size: 12px;
@@ -113,5 +99,23 @@
   line-height: 16px;
   color: #FF6B08;
   margin: 0;
+}
+
+.rating {
+  display: block;
+  width: 36px;
+  height: 16px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: #FF6B08;
+  color: #ffffff;
 }
 /*# sourceMappingURL=styles.css.map */
