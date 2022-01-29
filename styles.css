@@ -45,16 +45,6 @@
   list-style: none;
 }
 
-@media screen and (min-width: 768px) {
-  .film-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 .film-item {
   width: 100%;
   margin-bottom: 20px;
@@ -89,11 +79,9 @@
      object-fit: cover;
 }
 
-@media screen and (min-width: 768px) {
-  .film-info {
-    width: 100%;
-    padding-top: 10px;
-  }
+.film-info {
+  width: 100%;
+  padding-top: 10px;
 }
 
 .film-name {
