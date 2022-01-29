@@ -1,128 +1,94 @@
-body {
-    margin: 0;
-    padding: 0;
+.personal {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--background-gray-color);
+    text-align: center;
+
+     @media screen and (min-width: 1200px){
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
-.film {
-    outline: 1px solid red;
-    width: 320px;
-    margin: 0;
-    padding: 0;
-    padding-top: 20px;
-    padding-left: 20px; 
-    padding-right: 20px;
-    align-items: center;
+
+
+.personal__list {
     @media screen and (min-width: 768px) {
-       width: 768px;
-        margin: 0;
-        padding: 0;
-        align-items: center;
-        padding-left: 76px;
-        padding-right: 76px; 
-    }
-    @media screen and (min-width: 1024px) {
-        width: 1024px;
-        margin: 0;
-        padding: 0;
-        align-items: center;
-        padding-left: 71px;
-        padding-right: 71px; 
-    }
+        display: flex;
+        flex-wrap: wrap;
+    }    
     
-   
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }  
 }
 
-.film-list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr) ;
-    grid-gap: 20px;
-    padding: 20px;
-    margin: 0;
-    list-style: none;
+.personal__title {
+    margin-bottom: 30px;
     
-    @media screen and (min-width: 768px) {
-        display: grid; 
-        grid-template-columns: repeat(2, 1fr) ;
-        grid-gap: 30px;
-        padding: 0;
-        padding-top: 60px;
-        margin: 0;
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;   
     }
     
-    @media screen and (min-width: 1024px) {
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr) ;
-        grid-gap: 30px;
-        padding: 0;
-        padding-top: 60px;
-        margin: 0;
-    }
-    
-
-
 }
-.film-item {
- display: block;
+
+.personal__card {
+    padding-bottom: 24px;
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+
     @media screen and (min-width: 768px) {
         
+        height: 536px;
+
+        flex-basis: calc((100% - 30px) / 2);
+
+        &:not(:nth-child(2n)){
+            margin-right: 30px;
+        }
+
+        &:not(:nth-last-child(-n+2)){
+            margin-bottom: 30px;
+        }
     }
-}
-.film-img  {
-    width: 100%;
-    border-radius: 5px;
-    padding-bottom: 10px; 
-    @media screen and (min-width: 768px) {
-    
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 90px) / 4);
+        margin-right: 30px;
+        padding-bottom: 32px;
+        height: 428px; 
+        padding-bottom: 30px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
     }
+
 }
 
-
-.film-info {
-   
-margin: 0;
-padding: 0;
-@media screen and (min-width: 768px) {
-width: 280px;
-}
-}
-.film-name {
-    
-font-family: Roboto;
-font-weight: 500;
-font-size: 12px;
-line-height: 14px;
-text-transform: uppercase;
-color: #000000;
-margin: 0; 
-@media screen and (min-width: 768px) {
-   
-}
-}
-
-.film-genre {
-  
-font-family: Roboto;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 16px;
-color: #FF6B08;
-margin: 0;
-@media screen and (min-width: 768px) {
-    
-}
-}
-.rating {
-    display: block;
-    width: 36px;
-    height: 16px;
-    font-family: Roboto;
+.personal__card-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    align-items: center;
+    font-size: 16px;
+    line-height: 1.2;
     text-align: center;
-    text-transform: uppercase;
-    border-radius: 5px;
-    background-color: #FF6B08;
-    color: #ffffff;
+}
+
+.personal__card-description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--text-gray-color);
+    margin-bottom: 16px;
+}
+
+.personal__card-social-links-list {
+    display: inline-flex;
 }

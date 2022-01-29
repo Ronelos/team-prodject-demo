@@ -5,15 +5,9 @@ body {
 
 .film {
   outline: 1px solid red;
-  width: 320px;
   margin: 0;
   padding: 0;
   padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -34,30 +28,33 @@ body {
     width: 1024px;
     margin: 0;
     padding: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     padding-left: 71px;
     padding-right: 71px;
   }
 }
 
 .film-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
-  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0;
 }
 
 @media screen and (min-width: 768px) {
   .film-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
 .film-item {
-  width: 280px;
   margin: 0;
   padding-bottom: 20px;
 }
