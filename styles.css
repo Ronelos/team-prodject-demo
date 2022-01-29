@@ -1,83 +1,102 @@
-body {
+* {
   margin: 0;
   padding: 0;
 }
 
 .film {
   outline: 1px solid red;
-  margin: 0;
-  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media screen and (min-width: 768px) {
   .film {
     width: 768px;
-    margin: 0;
-    padding: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     padding-left: 76px;
     padding-right: 76px;
+    padding-top: 60px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .film {
     width: 1024px;
-    margin: 0;
-    padding: 0;
     padding-left: 71px;
     padding-right: 71px;
   }
 }
 
 .film-list {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
   .film-list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 .film-item {
-  margin: 0;
-  padding-bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .film-item {
+    width: 280px;
+    margin-bottom: 30px;
+  }
+  .film-item:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .film-item {
+    width: 274px;
+    margin-bottom: 30px;
+  }
+  .film-item:not(:nth-child(3n + 3)) {
+    margin-right: 30px;
+  }
 }
 
 .film-img {
-  width: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
   border-radius: 5px;
-  padding-bottom: 10px;
-}
-
-.film-info {
-  margin: 0;
-  padding: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 768px) {
   .film-info {
-    width: 280px;
+    width: 100%;
+    padding-top: 10px;
   }
 }
 
 .film-name {
-  margin: 0;
   width: 100%;
   font-family: Roboto;
   font-weight: 500;
@@ -95,7 +114,6 @@ body {
   font-size: 12px;
   line-height: 16px;
   color: #FF6B08;
-  margin: 0;
 }
 
 .rating {
